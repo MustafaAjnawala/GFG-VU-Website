@@ -1,0 +1,98 @@
+.teams #heading{
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.teams #heading span{
+    color: #318d44;
+}
+
+.teams-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 23rem;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px;
+    margin: 30px;
+}
+
+.photo img{
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+
+.card .title {
+    display: block;
+    font-size: 15px;
+    font-weight: 400;
+    color: #4e5052;
+    text-transform: capitalize;
+    margin: 0;
+    margin-bottom: 40px;
+}
+
+.card .name {
+    margin: 15px 0 3px 0;
+    font-size: 1.5rem;
+}
+
+.card .photo {
+    display: inline-block;
+    height: 130px;
+    width: 130px;
+    z-index: 1;
+    position: relative;
+    margin-top: 40px;
+}
+
+.card .photo {
+    display: inline-block;
+    height: 130px;
+    width: 130px;
+    z-index: 1;
+    position: relative;
+    margin-top: 40px;
+}
+
+.card .social-links {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: #318d44;
+    position: absolute;
+    bottom: -80px;
+    left: 0;
+    transition: all .5s ease 0s;
+}
+
+.card:hover .social-links {
+    bottom: 0;
+}
+
+.card .social-links li {
+    display: inline-block;
+}
+
+.card .social-links li a:hover{
+    background-color: #d7f6dd;
+    color: #318d44;
+}
+
+.card .social-links li a {
+    display: block;
+    padding: 8px;
+    font-size: 19px;
+    color: #fff;
+    transition: all .3s ease 0s;
+    text-decoration: none;
+}
