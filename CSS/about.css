@@ -6,21 +6,17 @@
     float: left; 
 }
 
-.navigation ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    position: absolute;
-    top: 80px; 
-    left: 20px; 
-    opacity: 0.9; 
-    z-index: 100; 
-    text-align: left; 
-}
+
 
 .navigation ul li {
     display: inline;
     margin-right: 100px;
+}
+
+.navigation li a:hover {
+    background-color: #ddd;
+    color: #000;
+    
 }
 
 .navigation ul li a {
@@ -46,7 +42,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background-color: #222221;
+    background-color: #ffffff;
     color: #27c500;
     
     
@@ -58,13 +54,13 @@ header {
     padding-left: 20px; 
     font-size: 24px; 
     color: #007c1c;
-    background-color: #222221;
+    background-color:#ffffff;
     
 
 }
 
 h1{
-    background-color: #222221; 
+    background-color: #ffffff;
     margin-top: 0px;
     margin-bottom: 20px;
     padding-top: 20px;
