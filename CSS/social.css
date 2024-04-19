@@ -1,1 +1,50 @@
+<style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4; /* Light grey background */
+            margin: 0;
+        }
 
+        .social-media-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            width: 800px; /* Increased width to fit larger content */
+            margin-left: 900px; /* Shift buttons to the right */
+        }
+
+        .social-button {
+            background-color: #fff;
+            border: none;
+            color: #000;
+            font-size: 24px; /* Increased font size */
+            padding: 20px 40px; /* Increased padding */
+            margin: 20px; /* Increased spacing between buttons */
+            border-radius: 40px; /* More pronounced rounded corners */
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            width: 300px; /* Increased button width */
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1); /* Shadow effect */
+            transition: transform 0.2s ease, box-shadow 0.2s ease; /* Smooth transition for hover effects */
+        }
+
+        .social-button i {
+            margin-right: 20px; /* More space between icon and text */
+            font-size: 32px; /* Larger icon size */
+        }
+
+        .social-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 20px rgba(0,0,0,0.2);
+        }
+
+        /* Specific colors for each social media platform */
+        .instagram { color: #E1306C; }
+        .twitter { color: #1DA1F2; }
+        .linkedin { color: #0077b5; }
+        .youtube { color: #FF0000; }
+    </style>
