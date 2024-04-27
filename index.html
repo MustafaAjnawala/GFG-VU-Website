@@ -41,25 +41,51 @@
     <link rel="stylesheet" href="CSS/general.css">
     <link rel="stylesheet" href="CSS/navbar.css">
     <link rel="stylesheet" href="CSS/teams.css">
+
+    <!-- scripts -->
+    <script src="script/active-navbar.js"></script>
 </head>
 <body>
-    <header></header>
+    <header>
+        <nav>
+            <ul class="sidebar">
+                <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/></svg></a></li>
+                <li><a href="#about-us-dir" class="active">About us</a></li>
+                <li><a href="#events-dir">Events</a></li>
+                <li><a href="#teams-dir">Teams</a></li>
+                <li><a href="#media-dir">Social Media</a></li>
+                <li><a href="#contact-dir">Contact</a></li>
+            </ul>
+            <div class="logo">
+                <a href="#about-us-dir"><img src="images/Logos/club-logo.png"></a>
+                <a href="https://www.vupune.ac.in" target="_blank"><img src="images/Logos/VU_logo.jpg"></a>
+            </div>
+            <ul>
+                <li class="hideOnMobile"><a href="#about-us-dir" class="active">About us</a></li>
+                <li class="hideOnMobile"><a href="#events-dir">Events</a></li>
+                <li class="hideOnMobile"><a href="#teams-dir">Teams</a></li>
+                <li class="hideOnMobile"><a href="#media-dir">Social Media</a></li>
+                <li class="hideOnMobile"><a href="#contact-dir">Contact</a></li>
+                <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/></svg></a></li>
+            </ul>
+        </nav>
+    </header>
     <main>
-        <section class="container">
+        <div class="container">
 
             <!-- Sahil's section -->
-            <div class="about-us"></div>
+            <section class="about-us" id="about-us-dir"></section>
 
             <!-- Mustafa's section -->
-            <div class="events"></div>
+            <section class="events" id="events-dir"></section>
 
             <!-- Hardik's section -->
-            <div class="teams">
+            <section class="teams" id="teams-dir">
                 <h1 id="heading"><span>Core</span>Team Members</h1>
                 <div class="teams-container">
                     <div class="card">
                         <div class="photo">
-                            <img src="images/chairperson.jpg">
+                            <img src="images/CoreTeam/chairperson.jpg">
                         </div>
                         <div class="c-content">
                             <h3 class="name">Ajab Raja</h3>
@@ -75,7 +101,7 @@
 
                     <div class="card">
                         <div class="photo">
-                            <img src="images/vice-chairperson.jpg">
+                            <img src="images/CoreTeam/vice-chairperson.jpg">
                         </div>
                         <div class="c-content">
                             <h3 class="name">Krish Gupta</h3>
@@ -91,7 +117,7 @@
 
                     <div class="card">
                         <div class="photo">
-                            <img src="images/tech-lead.jpg">
+                            <img src="images/CoreTeam/tech-lead.jpg">
                         </div>
                         <div class="c-content">
                             <h3 class="name">Aryan Mehta</h3>
@@ -106,7 +132,7 @@
 
                     <div class="card">
                         <div class="photo">
-                            <img src="images/marketing-head.jpg">
+                            <img src="images/CoreTeam/marketing-head.jpg">
                         </div>
                         <div class="c-content">
                             <h3 class="name">Jay Khabde</h3>
@@ -122,7 +148,7 @@
 
                     <div class="card">
                         <div class="photo">
-                            <img src="images/design-head.jpg">
+                            <img src="images/CoreTeam/design-head.jpg">
                         </div>
                         <div class="c-content">
                             <h3 class="name">Yojana Naik</h3>
@@ -138,7 +164,7 @@
 
                     <div class="card">
                         <div class="photo">
-                            <img src="images/social-meadia-head.jpg">
+                            <img src="images/CoreTeam/social-meadia-head.jpg">
                         </div>
                         <div class="c-content">
                             <h3 class="name">Aarohi Samdani</h3>
@@ -153,7 +179,7 @@
 
                     <div class="card">
                         <div class="photo">
-                            <img src="images/pr-head.jpg">
+                            <img src="images/CoreTeam/pr-head.jpg">
                         </div>
                         <div class="c-content">
                             <h3 class="name">Tejas Jadhav</h3>
@@ -168,7 +194,7 @@
 
                     <div class="card">
                         <div class="photo">
-                            <img src="images/event-head.jpg">
+                            <img src="images/CoreTeam/event-head.jpg">
                         </div>
                         <div class="c-content">
                             <h3 class="name">Rashi Chincholkar</h3>
@@ -182,19 +208,30 @@
                         </ul>
                     </div>
                 </div>
-            </div>
+            </section>
 
             <!-- Abhi's section -->
-            <div class="social-media"></div>
+            <section class="social-media" id="media-dir"></section>
 
             <!-- Affan's section -->
-            <div class="contact-us"></div>
-            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScFdsqM_x0gEh3pFOqbG7DYzI-WyBdIOKBM64zdvGjPeZC55A/viewform?embedded=true" width="640" height="950" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-        </section>
+            <section class="contact-us" id="contact-dir">
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScFdsqM_x0gEh3pFOqbG7DYzI-WyBdIOKBM64zdvGjPeZC55A/viewform?embedded=true" width="640" height="950" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+            </section>
+        </div>
     </main>
     <footer></footer>
 
     <!-- initialize the animation library -->
     <script>AOS.init();</script>
+    <script>
+        function showSidebar(){
+          const sidebar = document.querySelector('.sidebar')
+          sidebar.style.display = 'flex'
+        }
+        function hideSidebar(){
+          const sidebar = document.querySelector('.sidebar')
+          sidebar.style.display = 'none'
+        }
+      </script>
 </body>
 </html>
