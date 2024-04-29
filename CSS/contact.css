@@ -1,5 +1,6 @@
 .contact-us{
-    width: 640px;
+    width: auto;
+    display: flex;
     margin-left: auto;
     margin-right: auto;
 }
