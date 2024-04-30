@@ -16,12 +16,9 @@
 }
 
 header{
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    right: 0px;
+    position: sticky;
     background-color: white;
-    z-index: 10000000;
+    z-index: 100;
 }
 
 nav {
