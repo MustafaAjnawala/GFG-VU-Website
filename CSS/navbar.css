@@ -16,12 +16,12 @@
 }
 
 header{
-    position: fixed;
+    position: sticky;
     top: 0;
     left: 0;
     width: 100%;
     background-color: white;
-    z-index: 100;
+    z-index: 1001;
     transition: all 300ms ease-in-out;
 }
 
@@ -30,7 +30,7 @@ header{
 }
 
 .scroll-up header{
-    
+    text-decoration: none;
 }
 
 nav {

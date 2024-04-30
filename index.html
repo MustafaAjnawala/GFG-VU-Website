@@ -23,6 +23,7 @@
     <!-- icons library -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link rel="shortcut icon" href="images/Logos/club-logo.png" type="image/x-icon">
 
     <!-- carousel library -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
@@ -41,12 +42,13 @@
     <link rel="stylesheet" href="CSS/general.css">
     <link rel="stylesheet" href="CSS/navbar.css">
     <link rel="stylesheet" href="CSS/teams.css">
+    <link rel="stylesheet" href="CSS/preloader.css">
 
     <!-- scripts -->
     <script src="script/active-navbar.js"></script>
 </head>
 <body>
-    <div class="preloader"></div>
+    <div id="preloader"></div>
     <header>
         <nav>
             <ul class="sidebar">
@@ -58,7 +60,7 @@
                 <li><a href="#contact-dir">Contact</a></li>
             </ul>
             <div class="logo">
-                <a href="#about-us-dir"><img src="images/Logos/club-logo.png"></a>
+                <a href="index.html"><img src="images/Logos/club-logo.png"></a>
                 <a href="https://www.vupune.ac.in" target="_blank"><img src="images/Logos/VU_logo.jpg"></a>
             </div>
             <ul>
@@ -259,6 +261,14 @@
             }
 
             lastScroll = currentScroll;
+        })
+    </script>
+
+    <script>
+        const loader = document.getElementById('preloader');
+
+        window.addEventListener('load',function(){
+            loader.style.display = 'none';
         })
     </script>
 </body>

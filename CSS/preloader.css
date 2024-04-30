@@ -1,0 +1,14 @@
+#preloader{
+    background: #ffffff url(../images/Logos/loader.gif) no-repeat center center;
+    background-size: 20%;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 999999999;
+}
+
+@media (width < 600px) {
+    #preloader{
+        background-size: 40%;
+    }
+}
