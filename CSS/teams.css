@@ -1,10 +1,17 @@
+.teams{
+    margin-top: 85px;
+}
+
 .teams #heading{
+    font-family: "Rubik Doodle Shadow", system-ui;
     font-size: 2.5em;
     text-align: center;
     margin-bottom: 20px;
 }
 
 .teams #heading span{
+    margin-right: 4px;
+    font-family: "Rubik Doodle Shadow", system-ui;
     color: #318d44;
     text-align: center;
 }
