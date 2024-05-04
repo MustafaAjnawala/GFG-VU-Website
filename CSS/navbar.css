@@ -38,6 +38,7 @@ nav {
     padding: 20px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 nav ul {
@@ -111,8 +112,15 @@ nav li a {
     }
 }
 
-@media(max-width: 400px) {
+@media (max-width: 500px) {
     .sidebar {
         width: 50%;
+    }
+    nav{
+        padding: 10px;
+    }
+    .logo{
+        height: 30px;
+        width: auto;
     }
 }

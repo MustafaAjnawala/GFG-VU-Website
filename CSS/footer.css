@@ -86,3 +86,23 @@ footer span{
         top: -10%;
     }
 }
+
+@media (max-width: 500px) {
+    footer{
+        height: 12rem;
+        font-size: 1.1rem;
+    }
+    footer .social-media .icon {
+        width: 2.5rem; 
+        height: 2.5rem; 
+    }
+    .social-media .icon i{
+        line-height: 2.5rem;
+        font-size: 1rem;
+    }
+    footer span{
+        color: black;
+        font-weight: 500;
+        font-size: 1rem;
+    }
+}
