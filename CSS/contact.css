@@ -8,3 +8,9 @@
     margin-bottom: -176px;
     z-index: -1;
 }
+
+@media (max-width: 560px){
+    .contact-us{
+        margin-bottom: -140px;
+    }
+}

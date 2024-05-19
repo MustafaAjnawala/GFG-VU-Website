@@ -1,0 +1,107 @@
+.about-us{
+    display: flex;
+    padding: 40px;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    gap: 100px;
+}
+
+.heading{
+    font-size: 120px;
+    font-family: "Rubik Doodle Shadow", system-ui;
+}
+
+.heading span{
+    font-family: "Rubik Doodle Shadow", system-ui;
+    color: #318d44;
+}
+
+.description{
+    font-size: 20px;
+}
+
+.welcome{
+    font-size: 35px;
+    color: #318d44;
+    font-weight: 600;
+}
+
+
+.about-us-right{
+    animation: bounce 3s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@media (max-width: 1370px){
+    .about-us{
+        flex-wrap: wrap;
+        text-align: center;
+        gap: 50px;
+    }
+}
+
+@media (max-width: 1025px){
+    .heading{
+        font-size: 80px;
+    }
+    .about-us{
+        gap: 20px;
+    }
+}
+
+@media (max-width: 700px){
+    .heading{
+        font-size: 60px;
+    }
+    .description{
+        font-size: 20px;
+    }
+    .about-us{
+        gap: 20px;
+    }
+}
+
+@media (max-width: 500px){
+    .heading{
+        font-size: 48px;
+    }
+    .description{
+        font-size: 15px;
+    }
+    .about-us{
+        gap: 20px;
+    }
+}
+
+@media (max-width: 400px){
+    .heading{
+        font-size: 40px;
+    }
+    .description{
+        font-size: 15px;
+    }
+    .about-us{
+        gap: 20px;
+    }
+    .welcome{
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 350px){
+    .heading{
+        font-size: 35px;
+    }
+    .welcome{
+        font-size: 25px;
+    }
+}

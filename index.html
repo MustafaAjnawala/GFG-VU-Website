@@ -12,6 +12,8 @@
     <meta itemprop="description" content="GeeksforGeeks Student Chapter of Vishwakarma University.A community where developers, designers and programming enthusiast unite to learn, innovate, and thrive together">
     <meta name="twitter:title" content="GeeksforGeeks Student Chapter | Vishwakarma University">
     <meta name="twitter:description" content="GeeksforGeeks Student Chapter of Vishwakarma University.A community where developers, designers and programming enthusiast unite to learn, innovate, and thrive together">
+    <meta name="theme-color" content="#318d44">
+    <meta property="og:type" content="GFG Student Chapter | VU">
 
     <!-- By preconnecting to the host, the browser can set up the necessary sockets ahead of time, eliminating extra round trips and saving time -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -40,14 +42,12 @@
     <!-- Linking css file -->
     <link rel="stylesheet" href="CSS/about.css">
     <link rel="stylesheet" href="CSS/contact.css">
-    <link rel="stylesheet" href="CSS/design.css">
     <link rel="stylesheet" href="CSS/events.css">
     <link rel="stylesheet" href="CSS/footer.css">
     <link rel="stylesheet" href="CSS/general.css">
     <link rel="stylesheet" href="CSS/navbar.css">
     <link rel="stylesheet" href="CSS/teams.css">
     <link rel="stylesheet" href="CSS/preloader.css">
-
 
     <!-- scripts -->
     <script src="script/active-navbar.js"></script>
@@ -81,14 +81,23 @@
     </header>
     <main>
         <div class="container">
-
             <!-- Sahil's section -->
-            <section class="about-us" id="about-us-dir"></section>
+            <section class="about-us" id="about-us-dir">
+                <div class="about-us-left" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="500">
+                    <div class="heading"><span>Geeks</span>forGeeks</div>
+                    <div class="welcome">Welcome to</div>
+                    <div class="description">GeeksforGeeks Student Chapter of Vishwakarma University. A community where developers, designers and programming enthusiast unite to learn, innovate, and thrive together.</div>
+                </div>
+
+                <div class="about-us-right">
+                    <img src="images/Logos/gfg-poster.png">
+                </div>
+            </section>
 
             <!-- Mustafa's section -->
             <section class="events" id="events-dir">
-                <h1 id="heading">Past Events</h1>
-                <div class="swiper-container">
+                <h1 id="heading" data-aos="fade-down" data-aos-duration="800">Past Events</h1>
+                <div class="swiper-container" data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">
                     <div class="swiper mySwiper">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide"><img src="images/Events/1.jpeg"></div>
@@ -104,8 +113,8 @@
 
             <!-- Hardik's section -->
             <section class="teams" id="teams-dir">
-                <h1 id="heading"><span>Core</span>Team Members</h1>
-                <div class="teams-container">
+                <h1 id="heading" data-aos="fade-down" data-aos-duration="800"><span>Core</span>Team Members</h1>
+                <div class="teams-container" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
                     <div class="card">
                         <div class="photo">
                             <img src="images/CoreTeam/chairperson.jpg">
@@ -235,7 +244,7 @@
 
             <!-- Affan's section -->
             <section class="contact-us" id="contact-dir">
-                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeTVXvJEZIlg4IDLUm1GWTusMkQtixWXknj7NJH-qdVT33pUQ/viewform?embedded=true" width="640" height="900" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeTVXvJEZIlg4IDLUm1GWTusMkQtixWXknj7NJH-qdVT33pUQ/viewform?embedded=true" width="640" height="900" frameborder="0" marginheight="0" marginwidth="0" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">Loading…</iframe>
             </section>
         </div>
     </main>
@@ -258,7 +267,9 @@
     </footer>
 
     <!-- initialize the animation library -->
-    <script>AOS.init();</script>
+    <script>AOS.init({
+        once:true
+    });</script>
     <script>
         var swiper = new Swiper(".mySwiper", {
             spaceBetween: 30,
