@@ -11,6 +11,12 @@
 
 @media (max-width: 560px){
     .contact-us{
-        margin-bottom: -140px;
+        margin-bottom: -143px;
+    }
+}
+
+@media (max-width: 380px){
+    .contact-us{
+        margin-bottom: -130px;
     }
 }
