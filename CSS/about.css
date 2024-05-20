@@ -19,10 +19,12 @@
 
 .description{
     font-size: 20px;
+    font-family: "Montserrat", sans-serif;
 }
 
 .welcome{
     font-size: 35px;
+    font-family: "Montserrat", sans-serif;
     color: #318d44;
     font-weight: 600;
 }
