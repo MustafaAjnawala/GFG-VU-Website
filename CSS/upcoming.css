@@ -57,6 +57,7 @@
         text-align: center; 
         flex-grow: 0;
         max-width: 100%;
+        border: 0px solid green;
     }
 
     .event-poster {
