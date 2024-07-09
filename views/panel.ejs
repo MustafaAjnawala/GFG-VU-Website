@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="CSS/panel.css">
+</head>
+<body>
+    <form action="/logout" method="post" style="float: right;">
+        <button type="submit">Logout</button>
+    </form>
+
+    <h1>UPCOMING EVENTS</h1>
+
+  
+    <form action="/add-event" method="post"  enctype="multipart/form-data">
+        <h3>Add upcoming events</h3>
+        <label for="eventName">Event Name: </label><input type="text" name="eventName" required><br><br>
+        <label for="eventDesc">Event Desc: </label><input type="text" name="eventDesc" required><br><br>
+        <label for="eventDate">Event Date: </label><input type="date" name="eventDate" required><br><br>
+        <label for="eventTime">Event Time: </label><input type="time" name="eventTime" required><br><br>
+        <label for="eventReg">Event Reg Link: </label><input type="text" name="eventReg" required><br><br>
+        <label for="eventImage">Event Image: </label><input type="file" name="eventImage" accept=".png, .jpg, .jpeg" required style="border-radius: 5px;"><br><br>
+        <button type="submit">Add Event</button>
+    </form><br>
+    <h3>(Dynamic List)</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Event Name</th>
+                <th>Description</th>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Registration</th>
+                <th>Image</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% upcomingEvents.forEach(event => { %>
+                <tr>
+                    <td><%= event.eventName %></td>
+                    <td><%= event.eventDesc %></td>
+                    <td><%= event.eventDate %></td>
+                    <td><%= event.eventTime %></td>
+                    <td><a href="<%= event.eventReg %>">Register</a></td>
+                    <td>
+                        <% if (event.eventImage) { %>
+                            <img src="data:image/jpg;base64,<%= event.eventImage.toString('base64') %>" alt="Event Image" width="100">
+                        <% } else { %>
+                            No Image
+                        <% } %>
+                    </td>
+                    <td>
+                        <form action="/delete-event" method="POST" onsubmit="confirmDelete(event)">
+                            <input type="hidden" name="eventID" value="<%= event.eventID %>">
+                            <button type="submit">Delete</button>
+                        </form>
+                    </td>
+                </tr>
+            <% }); %>
+        </tbody>
+    </table>
+    <hr>
+    <h1>PAST EVENTS</h1>
+   
+    <form action="/add-past-event" method="post" enctype="multipart/form-data">
+        <h3>Add Past events</h3>
+        <label for="eventImage">Past Event Image: </label><input type="file" name="eventImage" accept=".png, .jpg, .jpeg" required><br><br>
+        <button type="submit">Add Past Event</button>
+    </form><br>
+    <h3>(Dynamic List)</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Image</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% pastEvents.forEach(event => { %>
+                <tr>
+                    <td>
+                        <% if (event.PastEventImage) { %>
+                            <img src="data:image/jpg;base64,<%= event.PastEventImage.toString('base64') %>" alt="Event Image" width="100">
+                        <% } else { %>
+                            No Image
+                        <% } %>
+                    </td>
+                    <td>
+                        <form action="/delete-past-event" method="POST" onsubmit="confirmDelete(event)">
+                            <input type="hidden" name="eventID" value="<%= event.PastEventID %>">
+                            <button type="submit">Delete</button>
+                        </form>
+                    </td>
+                </tr>
+            <% }); %>
+        </tbody>
+    </table>
+
+    <script>
+        function confirmDelete(event) {
+            event.preventDefault(); // Prevent the form submission by default
+            const confirmDeletion = confirm("Are you sure to delete?");
+            if (confirmDeletion) {
+                event.target.submit(); // Submit the form if user confirmed
+            }
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+{
+  "name": "gfg-vu-website",
+  "version": "1.0.0",
+  "description": "Official development repository for the GfG Student Chapter, Vishwakarma University.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "multer": "^1.4.5-lts.1",
+    "mysql2": "^3.10.2",
+    "nodemon": "^3.1.4",
+    "sanitize-html": "^2.13.0"
+  }
+}
