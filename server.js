@@ -28,12 +28,6 @@ const pool = mysql.createPool({
     database: 'gfg_vu'
 });
 
-//to display the main index.html file
-
-// app.get('/', (req, res) => {
-//     res.sendFile(__dirname + '/views/index.html');
-// });
-
 app.get('/',(req,res)=>{
   pool.query('select * from upcoming_events',(error,upcomingResults)=>{
     if(error){
