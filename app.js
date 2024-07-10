@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require('express');
 const mysql = require('mysql2');
 const bodyParser = require('body-parser');
@@ -6,7 +7,7 @@ const multer = require('multer');
 const path = require('path');
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 //setting thte view engine to render dynamic html files
 app.set("view engine", "ejs");
@@ -22,7 +23,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 const pool = mysql.createPool({
     connectionLimit: 5,
-    host: 'localhost',
+    host: process.env.MYSQL_URL,
     user: 'root',
     password: 'Sql$123%',
     database: 'gfg_vu'
